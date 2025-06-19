@@ -1,6 +1,9 @@
+require('dotenv').config(); // Cargar variables de entorno primero
+
 const express = require('express');
 const app = express();
-const port = 3000;
+
+const port = process.env.PORT || 3000;
 
 // Middleware para parsear JSON
 app.use(express.json());
@@ -11,6 +14,11 @@ let datos = {
   nombre: 'Franklin',
   profesion: 'Desarrollador'
 };
+
+// Ruta raíz para confirmar que la API funciona
+app.get('/', (req, res) => {
+  res.send('API funcionando correctamente');
+});
 
 // GET - Obtener los datos
 app.get('/api/datos', (req, res) => {
