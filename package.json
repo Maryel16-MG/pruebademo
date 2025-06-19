@@ -1,5 +1,5 @@
 {
-  "name": "pruebademo",
+  "name": "pruebademo05",
   "version": "1.0.0",
   "description": "API REST simple con Express para Azure App Service",
   "main": "app.js",
